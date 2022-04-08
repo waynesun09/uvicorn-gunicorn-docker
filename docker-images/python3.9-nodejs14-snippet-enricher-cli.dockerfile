@@ -17,7 +17,8 @@ RUN yum -y module reset nodejs && yum -y module enable nodejs:$NODEJS_VERSION &&
 USER 1001
 
 # Install snippet-enricher-cli npm package
-RUN pip install --no-cache-dir "uvicorn[standard]" gunicorn
+RUN pip install --no-cache-dir "uvicorn[standard]" gunicorn && \
+    npm install snippet-enricher-cli
 
 COPY ./start.sh ${APP_ROOT}/start.sh
 
