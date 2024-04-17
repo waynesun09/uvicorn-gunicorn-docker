@@ -1,8 +1,8 @@
-FROM registry.access.redhat.com/ubi9/python-39
+FROM registry.access.redhat.com/ubi9/python-311
 
 LABEL maintainer="Wayne Sun <gsun@redhat.com>"
 
-ENV NODEJS_VERSION=18
+ENV NODEJS_VERSION=20
 
 USER 0
 
